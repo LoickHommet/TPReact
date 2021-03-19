@@ -10,8 +10,8 @@ export default class Home extends Component {
     }
 
     render() {
-        <div className="row">
-            
+        return <div className="row">
+            Bonjour
         </div>
     }
 }
