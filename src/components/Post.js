@@ -9,7 +9,7 @@ export default class Post extends Component {
         <h5 className="card-title">{post.title}</h5>
             <p className="card-text">Tache:{post.completed}</p>
             <p className="card-text">{post.user.name}</p>
-            <Link to={`/todos/${post.id}`} className="btn btn-primary">Details</Link>
+            <Link to={`/taches/${post.id}`} className="btn btn-primary">Details</Link>
         </div>
     </div>
 

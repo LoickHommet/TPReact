@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './views/Home';
 import PostAdd from './views/Post/PostAdd';
 import PostDetail from './views/Post/PostDetail';
+
 import PostList from './views/Post/PostList';
 
 
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route exact path="/taches" component={PostList} />
         <Route exact path="/taches/ajouter" component={PostAdd} />
         <Route exact path="/taches/:id" component={PostDetail} />
+        <Route exact path="/taches/:id/modifier" component={PostDetail} />
       </switch>
       <Footer/>
     </BrowserRouter>

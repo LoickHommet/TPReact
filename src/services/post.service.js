@@ -35,4 +35,13 @@ export default class PostService {
          static async details(id) {
             return await axios.get(`${baseUrl}/todos/${id}`)
         }
+
+            /**
+     * Delete of post
+     * @param  id 
+     * @returns 
+     */
+    static async delete(id) {
+        return await axios.delete(`${baseUrl}/todos/${id}`)
+    }
 }
