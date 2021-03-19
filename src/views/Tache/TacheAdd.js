@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PostService from '../../services/post.service';
+import TacheService from '../../services/tache.service';
 
-export default class PostAdd extends Component {
+export default class TacheAdd extends Component {
 
     constructor(props) {
         super(props);
@@ -28,7 +28,7 @@ export default class PostAdd extends Component {
             userId: 1,
         }
        
-        let reponse = await PostService.create(data);
+        let reponse = await TacheService.create(data);
         console.log(reponse);
         
         

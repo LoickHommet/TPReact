@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
-import Post from '../../components/Post';
+import Tache from '../../components/Tache';
 import { Link } from 'react-router-dom';
-import PostService from '../../services/post.service';
+import TacheService from '../../services/tache.service';
 
-export default class PostList extends Component {
+export default class TacheList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts:[],
+            taches:[],
         }
     }
 
     async componentDidMount() {
-        let posts = await PostService.list(15);
-        console.log(posts);
-        this.setState({ posts: posts}); 
+        let taches = await TacheService.list(15);
+        console.log(taches);
+        this.setState({ taches: taches}); 
     }
 
     render() {
-        let {posts} = this.state;
+        let {taches} = this.state;
         return (
             <div className="container">
-                <h1>Liste des tâches des utilisateurs  </h1>
+                <h1>Liste des tâches des taches  </h1>
                 <Link className="btn btn-primary" to="/taches/ajouter">Ajouter une taches</Link>
                 <div className="row">
-                {posts.map(post => {                   
+                {taches.map(tache => {                   
                     return <div className="col-md-4">
-                        <Post post={post}/>
+                        <Tache tache={tache}/>
                     </div>
                 })}
             </div>

@@ -3,12 +3,12 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './views/Home';
-import PostAdd from './views/Post/PostAdd';
-import PostDetail from './views/Post/PostDetail';
-
-import PostList from './views/Post/PostList';
-
-
+import TacheAdd from './views/Tache/TacheAdd';
+import TacheDetail from './views/Tache/TacheDetail';
+import TacheUpdate from './views/Tache/TacheUpdate';
+import TacheList from './views/Tache/TacheList';
+import UserDetail from './views/User/UserDetail';
+import UserList from './views/User/UserList';
 export default class App extends Component {
 
   render() {
@@ -18,10 +18,14 @@ export default class App extends Component {
     
       <switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/taches" component={PostList} />
-        <Route exact path="/taches/ajouter" component={PostAdd} />
-        <Route exact path="/taches/:id" component={PostDetail} />
-        <Route exact path="/taches/:id/modifier" component={PostDetail} />
+        <Route exact path="/taches" component={TacheList} />
+        <Route exact path="/taches/ajouter" component={TacheAdd} />
+        <Route exact path="/taches/:id" component={TacheDetail} />
+        <Route exact path="/taches/:id/modifier" component={TacheUpdate} />
+        <Route exact path="/users" component={UserList} />
+        <Route exact path="/users/:id" component={UserDetail} />
+        
+
       </switch>
       <Footer/>
     </BrowserRouter>
